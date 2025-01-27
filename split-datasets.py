@@ -2,21 +2,15 @@ import os
 import shutil
 import random
 
-# Paths to your images and labels
-image_folder = "C:\_Pycharm-projects\_Yolo-Test-TrainModel\Phaeton-Images\data\images"
-label_folder = "C:\_Pycharm-projects\_Yolo-Test-TrainModel\Phaeton-Images\data\labels"
+# Paths to your images and labels (use raw strings to avoid issues with backslashes)
+image_folder = r"C:\_Pycharm-projects\_Yolo-Test-TrainModel\Phaeton-Images\data\images"
+label_folder = r"C:\_Pycharm-projects\_Yolo-Test-TrainModel\Phaeton-Images\data\labels"
 
 # Directories for train and validation
-train_image_folder = "C:\_Pycharm-projects\_Yolo-Test-TrainModel\Phaeton-Images\data\train\images"
-val_image_folder = "C:\_Pycharm-projects\_Yolo-Test-TrainModel\Phaeton-Images\data\validation\images"
-train_label_folder = "C:\_Pycharm-projects\_Yolo-Test-TrainModel\Phaeton-Images\data\train\labels"
-val_label_folder = "C:\_Pycharm-projects\_Yolo-Test-TrainModel\Phaeton-Images\data\validation\labels"
-
-# Create the folders if they don't exist
-os.makedirs(train_image_folder, exist_ok=True)
-os.makedirs(val_image_folder, exist_ok=True)
-os.makedirs(train_label_folder, exist_ok=True)
-os.makedirs(val_label_folder, exist_ok=True)
+train_image_folder = r"C:\_Pycharm-projects\_Yolo-Test-TrainModel\Phaeton-Images\data\train\images"
+val_image_folder = r"C:\_Pycharm-projects\_Yolo-Test-TrainModel\Phaeton-Images\data\validation\images"
+train_label_folder = r"C:\_Pycharm-projects\_Yolo-Test-TrainModel\Phaeton-Images\data\train\labels"
+val_label_folder = r"C:\_Pycharm-projects\_Yolo-Test-TrainModel\Phaeton-Images\data\validation\labels"
 
 # Get all image files
 image_files = [f for f in os.listdir(image_folder) if f.endswith('.jpg') or f.endswith('.png')]
